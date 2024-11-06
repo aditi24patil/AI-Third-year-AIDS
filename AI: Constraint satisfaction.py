@@ -46,7 +46,6 @@ def n_queens_branch_and_bound(N):
 N = int(input("Enter the number of queens: "))
 n_queens_branch_and_bound(N)
 
-
 # Graph Coloring Problem Solution
 def is_safe_graph(graph, color, v, c):
     for i in range(len(graph)):
@@ -86,3 +85,6 @@ graph = [
     [1, 0, 1, 0]
 ]
 m = 3  # Number of colors
+
+# Execute Graph Coloring Solution
+graph_coloring(graph, m)
