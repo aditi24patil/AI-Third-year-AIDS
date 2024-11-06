@@ -133,3 +133,10 @@ root.mainloop()
 
 # Close the database connection when done
 conn.close()
+
+
+FOR SQL
+
+create databse SM;
+use SM;
+create table stud(id int primary key auto increment, first_name varchar(50), last_name varchar(50), email varchar(100),phone varchar(15));
