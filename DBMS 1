@@ -74,17 +74,26 @@ VALUES (book_id_seq.NEXTVAL, 'Harry Potter and the Philosopher''s Stone', 2, 2, 
 
 10 QUERIES:
 SELECT * FROM BookDetails;
+
 SELECT title, price FROM Books WHERE price > 20;
+
 SELECT a.name, COUNT(b.book_id) AS book_count
 FROM Authors a
 LEFT JOIN Books b ON a.author_id = b.author_id
 GROUP BY a.name;
+
 SELECT title, published_date FROM Books WHERE published_date < TO_DATE('2000-01-01', 'YYYY-MM-DD');
+
 SELECT AVG(price) AS avg_price FROM Books;
+
 SELECT title FROM Books WHERE title LIKE 'Harry%';
+
 SELECT DISTINCT name FROM Publishers;
+
 UPDATE Books SET price = price + 5 WHERE title = '1984';
+
 DELETE FROM Books WHERE author_id = 1;
+
 SELECT title FROM Books WHERE author_id = 2
 UNION
 SELECT title FROM Books WHERE publisher_id = 1;
