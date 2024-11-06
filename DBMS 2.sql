@@ -1,14 +1,14 @@
-#Write at least10 SQL queries for suitable database application using SQL DML statements. Note: Instructor
-will design the queries which demonstrate the use of concepts like all types of Join ,Sub-Query and View.
+--Write at least10 SQL queries for suitable database application using SQL DML statements. Note: Instructor
+--will design the queries which demonstrate the use of concepts like all types of Join ,Sub-Query and View.
 
-Create table as follows:
+--Create table as follows:
 Books: (book_id, title, author_id, publisher_id, genre, price, published_date)
 Authors: (author_id, name, country)
 Members: (member_id, name, membership_date)
 BorrowedBooks: (borrow_id, book_id, member_id, borrow_date, due_date, return_date)
 Publishers: (publisher_id, name, country)
 
-QUERIES:
+--QUERIES:
 SELECT bb.borrow_id, b.title, m.name AS member_name, a.name AS author_name, bb.borrow_date
 FROM BorrowedBooks bb
 JOIN Books b ON bb.book_id = b.book_id
