@@ -1,0 +1,25 @@
+--import export
+
+SHOW VARIABLES LIKE'SECURE_FILE_PRIV';
+
+SELECT*FROM USERS 
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/users.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+SELECT * FROM users
+INTO OUTFILE ‘'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/users.txt'
+FIELDS TERMINATED BY ‘\t’
+LINES TERMINATED BY ‘\n’;
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/users.csv' 
+INTO TABLE users 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+LOAD DATA INFILE ‘C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/users.txt'
+INTO TABLE users2
+FIELDS TERMINATED BY ‘\t’
+LINES TERMINATED BY ‘\n’;
