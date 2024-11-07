@@ -1,5 +1,5 @@
 #Implement Greedy search algorithm for any of the following application:  
-*  Job Scheduling Problem 
+#Job Scheduling Problem 
 
 def printJobScheduling(arr, max_deadline=None):
     n = len(arr)
